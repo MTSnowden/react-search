@@ -30,7 +30,9 @@ function TitleList(props) {
 }
 
 const titleStyle = {
-    width: '50%',
-    margin: '40px auto'
+    width: '80%',
+    margin: '40px auto',
+    color: '#777',
+
 }
 export default TitleList;

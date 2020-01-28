@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Bootstrap from 'bootstrap'
 
 class SearchBox extends Component {
     constructor() {
@@ -15,16 +16,18 @@ class SearchBox extends Component {
         const { searchTerm } = this.state;
         return (
 
-            <div className="search-container" 
+            <div className="container" 
                  style={searchContainerStyle}>
                 <h2 className="heading" 
                     style={headingStyle}>
                         Live Search: React Application
                 </h2>
+                <p></p>
                 <label className="search-label" 
                        style={searchLabelStyle} 
                        htmlFor="search-input">
                         <input 
+                            className="responsive"
                             type="text"
                             value={searchTerm}
                             name="searchTerm"
@@ -41,9 +44,9 @@ class SearchBox extends Component {
                                 }
                             }
                         />
-                    <i className="fa fa-search" 
+                    {/* <i className="fa fa-search" 
                        style={searchIconStyle}
-                       aria-hidden="true" />
+                       aria-hidden="true" /> */}
                 </label>
             </div>
         )
@@ -52,14 +55,13 @@ class SearchBox extends Component {
 
 const searchContainerStyle = {
     margin: '40px auto',
-    width: '100%',
-    maxWidth: '800px'
+    width: '80%'
 }
 
 const headingStyle = {
-    fontSize: '30px',
+    fontSize: '50px',
     padding: '20px 0',
-    color: '#444',
+    color: '#555',
     textAlign: 'center'
 }
 
@@ -68,7 +70,7 @@ const searchLabelStyle = {
 }
 
 const searchInputStyle = {
-    width: '75%',
+    width: '200%',
     padding: '20px',
     fontSize: '30px',
     fontStyle: 'italic',
@@ -77,12 +79,12 @@ const searchInputStyle = {
     outline: 'none'
 }
 
-const searchIconStyle = {
-    position: 'absolute',
-    top: '-10px',
-    right: '20px',
-    fontSize: '25px',
-    color: '#777'
-}
+// const searchIconStyle = {
+//     position: 'absolute',
+//     top: '-10px',
+//     right: '20px',
+//     fontSize: '25px',
+//     color: '#777'
+// }
 
 export default SearchBox

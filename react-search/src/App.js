@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 // import PropTypes from "prop-types";
-import "./App.css";
 import TitleList from "./components/TitleList";
 import SearchBoxContainer from "./containers/SearchContainer";
 
@@ -12,18 +11,21 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='app-container' >
+
         <header className="Header">
           <SearchBoxContainer />
         </header>
-        <TitleList 
-          title="Search Results" 
-          movies={this.props.searchResults} />
-        <TitleList 
-          title="My Movies" 
-          movies={this.props.myMovieList} />
+        
+        <body>
+          <TitleList 
+            title="Search Results" 
+            movies={this.props.searchResults} />
+        </body>
+        
       </div>
     );
   }
 }
+
 export default App;
