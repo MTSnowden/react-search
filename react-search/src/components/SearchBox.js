@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Bootstrap from 'bootstrap'
 
 class SearchBox extends Component {
     constructor() {
@@ -19,8 +18,9 @@ class SearchBox extends Component {
             <div className="container" 
                  style={searchContainerStyle}>
                 <h2 className="heading" 
+                    alt="Live Search React Application"
                     style={headingStyle}>
-                        Live Search: React Application
+                        Live Search React Application
                 </h2>
                 <p></p>
                 <label className="search-label" 
@@ -28,6 +28,7 @@ class SearchBox extends Component {
                        htmlFor="search-input">
                         <input 
                             className="responsive"
+                            alt="search"
                             type="text"
                             value={searchTerm}
                             name="searchTerm"
@@ -44,9 +45,7 @@ class SearchBox extends Component {
                                 }
                             }
                         />
-                    {/* <i className="fa fa-search" 
-                       style={searchIconStyle}
-                       aria-hidden="true" /> */}
+                    
                 </label>
             </div>
         )
@@ -55,7 +54,8 @@ class SearchBox extends Component {
 
 const searchContainerStyle = {
     margin: '40px auto',
-    width: '80%'
+    width: '80%',
+    outline: "2px solid black"
 }
 
 const headingStyle = {
@@ -78,13 +78,5 @@ const searchInputStyle = {
     boxSizing: 'borderBox',
     outline: 'none'
 }
-
-// const searchIconStyle = {
-//     position: 'absolute',
-//     top: '-10px',
-//     right: '20px',
-//     fontSize: '25px',
-//     color: '#777'
-// }
 
 export default SearchBox

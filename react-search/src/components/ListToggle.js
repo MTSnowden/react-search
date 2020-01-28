@@ -23,10 +23,10 @@ class ListToggle extends Component {
       <div onClick={this.handleClick} 
         data-toggled={this.state.toggled} 
         className="ListToggle">
-        <div>
+        {/* <button alt="toggle button">
           <i className="fa fa-fw fa-plus" />
           <i className="fa fa-fw fa-check" />
-        </div>
+        </button> */}
       </div>
     );
   }
